@@ -1,0 +1,31 @@
+@import 'variables';
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    // Nesting and parent selector
+    input {
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid lighten($text-color, 50%);
+        border-radius: 4px;
+        &[type="submit"] {
+            background-color: $secondary-color;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: darken($secondary-color, 10%);
+            }
+        }
+    }
+}
+
+// Results section
+#results {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+}

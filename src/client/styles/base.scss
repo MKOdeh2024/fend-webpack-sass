@@ -1,0 +1,30 @@
+@import 'variables';
+// Mixins (new Sass feature)
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+// Placeholder selector (new Sass feature)
+%section-styles {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+section {
+    @extend %section-styles;
+}

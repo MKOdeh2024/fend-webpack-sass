@@ -1,0 +1,19 @@
+@import 'variables';
+footer {
+    height: $footer-height;
+    background-color: $primary-color;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 14px;
+    }
+}
+
+// Media query using a variable
+@media (max-width: $mobile) {
+    footer {
+        font-size: 12px;
+    }
+}
